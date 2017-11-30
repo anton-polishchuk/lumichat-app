@@ -1,0 +1,215 @@
+@import '../../../../../node_modules/bootstrap/scss/_functions.scss';
+@import "../../../../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../../../../node_modules/bootstrap/scss/_mixins.scss";
+@import "../../../scss/variables";
+
+.catalogue {
+  h2 {
+    font: 33px "MuliBold";
+    line-height: 65px;
+    margin-bottom: 50px;
+  }
+  &__searchPanel {
+    margin-bottom: 40px;
+    border-bottom: $section-border;
+    &--switch {
+      cursor: pointer;
+      font: 22px "MuliSemibold";
+      border-radius: 5px;
+      overflow: hidden;
+      div {
+        line-height: 41px;
+        text-align: center;
+        float: left;
+        width: 84px;
+        &:first-of-type{
+          border: 2px solid $font-color-alter;
+          border-right: none;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+        &:last-of-type{
+          border: 2px solid $font-color-alter;
+          border-left: none;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        &.active {
+          border: 2px solid $font-color-main;
+          background: $btn-bg-live;
+          border-color: $btn-bg-live;
+          &:hover{
+            background: $btn-hover-main;
+          }
+        }
+        &:hover {
+          border-color: $btn-bg-live;
+        }
+      }
+    }
+    &--search {
+      margin-bottom: 50px;
+
+      input {
+        color: $font-color-main;
+        font: 22px "MuliSemibold";
+        width: 304px;
+        height: 45px;
+        outline: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid $font-color-alter;
+        line-height: 38px;
+        margin-left: 2px;
+        padding: 0 20px;
+        &::placeholder {
+          color: $font-color-main;
+        }
+      }
+    }
+  }
+
+  &__performers {
+    h2 {
+      font: 33px "MuliBold";
+      line-height: 60px;
+      margin-bottom: 40px;
+    }
+    &--row {
+      margin-bottom: -70px;
+    }
+    &--box {
+      margin-bottom: 70px;
+    }
+    &--link {
+      padding-top: 6px;
+      text-align: right;
+      line-height: 65px;
+      a {
+        span {
+          font: 22px "MuliRegular"
+        }
+      }
+    }
+    &--thumb {
+      img {
+        width: 100%;
+        height: 232px;
+      }
+    }
+    &--name {
+      padding-top: 15px;
+      a {
+        color: $font-color-main;
+      }
+      .btn__live {
+        position: relative;
+        top: -4px;
+      }
+      span {
+        padding-right: 20px;
+        font-family: "MuliRegular";
+        font-size: 26px;
+        line-height: 25px;
+      }
+    }
+    &--viewers {
+      color: $font-color-alter;
+      font-size: 14px;
+      padding: 5px 0 0 35px;
+      background: url("../../../../assets/images/multiple-users-silhouette.svg") bottom left no-repeat;
+      background-size: 24px 19px;
+    }
+  }
+}
+
+.widget {
+  &__live {
+    h2 {
+      font-family: "MuliBold";
+      padding-bottom: 30px;
+    }
+    &--link {
+      padding-top: 6px;
+      text-align: right;
+      line-height: 65px;
+    }
+  }
+  &__performers {
+    padding-top: 34px;
+    &--name {
+      padding-top: 15px;
+      .btn__live {
+        position: relative;
+        top: -4px;
+      }
+      span {
+        padding-right: 20px;
+        font-family: "MuliRegular";
+        font-size: 26px;
+        line-height: 25px;
+      }
+    }
+    &--viewers {
+      color: $font-color-alter;
+      font-size: 14px;
+      padding: 5px 0 0 35px;
+      background: url("../../../../assets/images/multiple-users-silhouette.svg") bottom left no-repeat;
+      background-size: 24px 19px;
+    }
+  }
+}
+
+
+//Mobile
+@include media-breakpoint-down(sm) {
+  .catalogue {
+    &__searchPanel {
+      height: 135px;
+      margin-bottom: 30px;
+      &--switch {
+        width: 100%;
+        margin-bottom: 15px;
+        div {
+          width: 50%;
+        }
+      }
+      &--search {
+        border-bottom: 1px solid $section-border;
+        input {
+          width: 100%;
+        }
+      }
+    }
+    &__performers {
+      h2 {
+        font-size: 22px!important;
+        line-height: 30px!important;
+        margin-bottom: 30px;
+      }
+      &--row {
+        margin-bottom: 0;
+      }
+      &--thumb {
+        img {
+          height: 190px;
+        }
+      }
+      &--box {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-only(sm) {
+  .catalogue {
+    &__performers {
+      &--thumb {
+        img {
+          height: 300px;
+        }
+      }
+    }
+  }
+}

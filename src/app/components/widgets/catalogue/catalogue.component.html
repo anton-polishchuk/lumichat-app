@@ -1,0 +1,49 @@
+<div class="container catalogue">
+  <div class="row catalogue__searchPanel" *ngIf="searchPanel">
+    <div class="col-md-2">
+      <div class="catalogue__searchPanel--switch">
+        <div [ngClass]="{'active': listMode === 'live'}" (click)="toggleList('live')">Live</div>
+        <div [ngClass]="{'active': listMode === 'all'}" (click)="toggleList('all')">All</div>
+      </div>
+    </div>
+    <div class="col-md-4 catalogue__searchPanel--search">
+      <input type="text" placeholder="Search" [(ngModel)]="search" (keyup)="getSearchCount()">
+    </div>
+  </div>
+      <div class="row catalogue__performers">
+        <div class="col-md-7">
+          <h2 *ngIf="searchCount || !searchPanel">
+            {{searchCount}} awesome performers <span *ngIf="areLive"><br class="d-xs-block"/>are <span class="btn__live btn__live--lg">Live</span> now</span>
+          </h2>
+          <h2 *ngIf="!searchCount && searchPanel">
+            No search results found
+          </h2>
+        </div>
+        <div class="col-md-5 catalogue__performers--link d-xs-none" *ngIf="seeAllPerformers">
+          <a routerLink="/catalogue" routerLinkActive="active"><span>See all performers</span></a>
+        </div>
+      </div>
+      <div class="row catalogue__performers--row">
+        <div class="col-md-4 catalogue__performers--box" *ngFor="let performer of performers | listMode: listMode | search: search">
+          <div class="catalogue__performers--thumb">
+            <a routerLink="/live" routerLinkActive="active">
+            <img [src]="performer.poster" src="/assets/images/perfor_thumb.png" alt="Nicole Gray">
+            </a>
+          </div>
+          <div class="catalogue__performers--name">
+            <a routerLink="/profile" routerLinkActive="active">
+            <span>{{performer.name}}</span>
+            <span class="btn__live btn__live--sm" *ngIf="performer.status==='live'">Live</span>
+            </a>
+          </div>
+          <div class="catalogue__performers--viewers">
+            1983 viewers
+          </div>
+        </div>
+        <div class="col-sm-12 d-xs-block" *ngIf="seeAllPerformers">
+          <a routerLink="/catalogue" routerLinkActive="active">
+            <div class="btn-primary main d-xs-block">See all performers</div>
+          </a>
+        </div>
+      </div>
+    </div>

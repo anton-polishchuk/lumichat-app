@@ -1,0 +1,249 @@
+<section class="hero">
+  <div class="hero__img">
+  </div>
+  <div class="container">
+    <div class="row hero__description">
+      <div class="col-md-6">
+        <h1>#​​First VR live chat <br> with cam performers</h1>
+        <h4>Effortlessy browse VR streams and <br class="d-sm-only"/> communicate with performers without ever taking
+          off your headset</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <a routerLink="/live" routerLinkActive="active">
+          <div class="btn-primary main">Start watching now</div>
+        </a>
+      </div>
+      <!--<div class="col-md-3 offset-md-1 hero__vr&#45;&#45;box">-->
+        <!--<div class="hero__vr">-->
+          <!--<img src="../../../assets/images/vr_icon.png" alt="VR" class="d-xs-none">-->
+          <!--<img src="../../../assets/images/vr_white.svg" alt="VR" class="d-xs-block">-->
+          <!--<span>VR</span>-->
+        <!--</div>-->
+        <!--<div class="hero__vr">-->
+          <!--<span>360 HD</span>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+    <div class="row hero__support">
+      <div class="col-md-3">
+        <span>We support</span><br>
+        <img class="hero__item" src="../../../assets/images/cardboard.png" alt="cardboard">
+      </div>
+      <div class="col-md-1 d-xs-none">
+      </div>
+      <div class="col-md-8">
+        <span>Soon</span><br>
+        <img class="hero__item" src="../../../assets/images/oculus.png" alt="oculus">
+        <img class="hero__item" src="../../../assets/images/gear.png" alt="gear">
+        <img class="hero__item" src="../../../assets/images/daydream.png" alt="daydream">
+      </div>
+    </div>
+    <div class="row hero__qr--row d-xs-none">
+      <div class="col-md-3">
+        <div class="hero__qr">
+          <img src="../../../assets/images/phone.svg" alt="mobile">
+        </div>
+        <div class="hero__qr--desc">
+        <span>Open on mobile, <br>
+        use with cardboard</span>
+        </div>
+      </div>
+      <div class="col-md-1 hero__qr--arrow">
+      </div>
+      <div class="col-md-3 hero__qr--code">
+        <img src="/assets/images/qr-code.png" alt="qr-code">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="widget__live">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h2>
+          30 awesome performers <br class="d-xs-block"/>are <span class="btn__live btn__live--lg">Live</span> now
+        </h2>
+      </div>
+      <div class="col-md-5 widget__live--link d-xs-none">
+        <a routerLink="/catalogue" routerLinkActive="active"><span>See all performers</span></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="widget__performers--thumb">
+          <a routerLink="/live" routerLinkActive="active">
+          <img src="/assets/images/poster.jpg" alt="Nadya Nabakova">
+          </a>
+        </div>
+        <div class="widget__performers--name">
+          <a routerLink="/profile" routerLinkActive="active">
+          <span>Nadya Nabakova</span> <span class="btn__live btn__live--sm">Live</span>
+          </a>
+        </div>
+        <div class="widget__performers--viewers">
+          90 viewers
+        </div>
+      </div>
+      <div class="col-md-4 d-xs-none">
+        <div class="widget__performers--thumb" (click)="openPopup()">
+          <img src="/assets/images/poster2.png" alt="Angie Fae">
+        </div>
+        <div class="widget__performers--name" (click)="openPopup()">
+          <span>Angie Fae</span> <span class="btn__live btn__live--sm">Live</span>
+        </div>
+        <div class="widget__performers--viewers">
+          114 viewers
+        </div>
+      </div>
+      <div class="col-md-4 d-xs-none">
+        <div class="widget__performers--thumb" (click)="openPopup()">
+          <img src="/assets/images/poster3.png" alt="Kaylani Rain">
+        </div>
+        <div class="widget__performers--name" (click)="openPopup()">
+          <span>Kaylani Rain</span> <span class="btn__live btn__live--sm">Live</span>
+        </div>
+        <div class="widget__performers--viewers">
+          21 viewers
+        </div>
+      </div>
+      <div class="col-sm-12 d-xs-block">
+        <a routerLink="/catalogue" routerLinkActive="active">
+          <div class="btn-primary main d-xs-block">See all performers</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="widget__experience">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>With Lumichat VR <br class="d-xs-block"/>you get access to a live, <br class="d-xs-none"/>
+          immercive, 3D 360° cam show</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <video autoplay="autoplay" controls loop="loop" preload="auto" class="promo-video" poster="/assets/images/promo.jpg">
+          <source src="/assets/video/promo.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="widget__join">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Stay closer <br class="d-xs-block">to performers <br> as never before</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 widget__join--box">
+        <img src="/assets/images/voice.png" alt="voice recording">
+        <div class="widget__join--desc">
+         Voice <br>
+          Recording
+        </div>
+      </div>
+      <div class="col-md-3 widget__join--box">
+        <img src="/assets/images/donation.png" alt="donation system">
+        <div class="widget__join--desc">
+          Donation <br>
+          System
+        </div>
+      </div>
+      <div class="col-md-3 widget__join--box">
+        <img src="/assets/images/chat.png" alt="multifunctional chat">
+        <div class="widget__join--desc">
+          Multifunctional <br>
+          Chat
+        </div>
+      </div>
+      <div class="col-md-3 widget__join--box">
+        <img src="/assets/images/vr-streaming.png" alt="streaming technology">
+        <div class="widget__join--desc">
+          Flawless VR <br>
+          Streaming <br class="d-xs-block"> Technology
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="widget__devices">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Seamless experience <br> across all devices</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 widget__devices--item">
+        <img src="../../../assets/images/phone.svg" alt="Mobile" class="mobile">
+        <div class="caption">Mobile</div>
+      </div>
+      <div class="col-md-4 widget__devices--item">
+        <img src="../../../assets/images/desktop.svg" alt="Desktop" class="desktop">
+        <div class="caption">Desktop</div>
+      </div>
+      <div class="col-md-5 widget__devices--item">
+        <img src="../../../assets/images/headset.svg" alt="Headset" class="headset">
+        <div class="caption">Headset</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="widget__3dCam">
+  <div class="widget__3dCam--image">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 offset-md-5">
+        <h2>
+          The perfect 3D effect with
+          our new outstanding camera
+        </h2>
+        <div class="widget__3dCam--offer">
+          The firsts 100 performers, who join Lumichat, <br class="d-xs-none"/>
+          will get the camera for free.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-profile [title]="true" [checkProfileBtn]="true"></app-profile>
+<section class="widget__subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 widget__subscribe--box">
+        <div class="caption">
+          Sounds interesting? <br class="d-xs-none">
+          Sign up for updates and <br class="d-xs-none">
+          get 100 coins
+        </div>
+        <div class="description">
+          Subscribe for our updates and be the first <br class="d-xs-none">
+          who will know about launch <br> <br>
+        </div>
+        <div class="btn-primary main" (click)="openPopup()">Subscribe</div>
+      </div>
+      <div class="col-md-6 widget__subscribe--box">
+        <div class="caption">
+          Join us <br class="d-xs-block"/> as a performer <br/>
+          and express your personality <br class="d-xs-none">
+          by camming
+        </div>
+        <div class="description">
+          Fill the form and we'll get back you with more info <br class="d-xs-none">
+          ASAP. If you still have question — drop us a line to <br class="d-xs-none">
+          <a href="mailto:'hello@lumichat.com'">hello@lumichat.com</a>
+        </div>
+        <a href="https://goo.gl/forms/amAj7MqScV0FCXHY2" target="_blank">
+          <div class="btn-primary main">Fill the form</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

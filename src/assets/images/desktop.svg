@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="675 4595 150 86">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #95989a;
+      }
+
+      .cls-1 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Phone" transform="translate(350 3841)">
+    <g id="Rectangle_8" data-name="Rectangle 8" class="cls-1" transform="translate(325 832)">
+      <path class="cls-3" d="M2.667,0H147.333A2.667,2.667,0,0,1,150,2.667v0A5.333,5.333,0,0,1,144.667,8H5.333A5.333,5.333,0,0,1,0,2.667v0A2.667,2.667,0,0,1,2.667,0Z"/>
+      <path class="cls-4" d="M2.714,1H147.286A1.714,1.714,0,0,1,149,2.714v0A4.286,4.286,0,0,1,144.714,7H5.286A4.286,4.286,0,0,1,1,2.714v0A1.714,1.714,0,0,1,2.714,1Z"/>
+    </g>
+    <g id="Rectangle_265" data-name="Rectangle 265" class="cls-1" transform="translate(335 754)">
+      <path class="cls-3" d="M8,0H122a8,8,0,0,1,8,8V80a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8A8,8,0,0,1,8,0Z"/>
+      <path class="cls-4" d="M8,1H122a7,7,0,0,1,7,7V78a1,1,0,0,1-1,1H2a1,1,0,0,1-1-1V8A7,7,0,0,1,8,1Z"/>
+    </g>
+    <g id="Rectangle_360" data-name="Rectangle 360" class="cls-2" transform="translate(343 763)">
+      <rect class="cls-3" width="114" height="65"/>
+      <rect class="cls-4" x="0.5" y="0.5" width="113" height="64"/>
+    </g>
+  </g>
+</svg>

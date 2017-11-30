@@ -1,0 +1,196 @@
+@import "../../../scss/variables";
+@import '../../../../../node_modules/bootstrap/scss/_functions.scss';
+@import "../../../../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../../../../node_modules/bootstrap/scss/_mixins.scss";
+
+.widget {
+  &__chat {
+    padding-left: 5px;
+    .hide-scroll {
+      width: 100%;
+      overflow: hidden;
+    }
+    &--container {
+      padding-right: 0;
+    }
+    &--heading {
+      font: 22px "MuliLight";
+      padding-bottom: 15px;
+      border-bottom: $section-border;
+    }
+    &--body {
+      width: 104%;
+      position: relative;
+      overflow-y: scroll;
+      height: 360px;
+      margin: 25px 0 15px;
+      overflow-x: hidden;
+      right: -17px;
+      left: 0;
+      .message {
+        position: relative;
+        font: 16px "MuliRegular";
+        clear: both;
+        padding: 10px 15px;
+        max-width: 300px;
+        margin-bottom: 5px;
+        letter-spacing: -0.3px;
+        display: block;
+
+        &.red {
+          background: $chart-bg-color-main;
+          float: right;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          right: 0;
+        }
+        &.grey {
+          background: $chart-bg-color-alter;
+          float: left;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          margin-bottom: 25px;
+          margin-left: 20px;
+        }
+        &.dark {
+          background: $btn-bg-alter;
+          float: left;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          margin-bottom: 25px;
+          margin-left: 20px;
+        }
+        &.gold {
+          background: #a17f1a;
+          float: left;
+          border: 1px solid #a17f1a;
+          border-radius: 10px;
+          margin-left: 20px;
+          margin-bottom: 5px;
+        }
+        &:first-of-type {
+          padding-right: 40px;
+        }
+        &:first-of-type:after {
+          background-image: url('../../../../assets/images/love-emoji.png');
+          background-size: 20px;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          right: 17px;
+          top: 10px;
+          content: "";
+        }
+      }
+    }
+    &--signature {
+      font: 11px "MuliRegular";
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      padding-left: 20px;
+      background: url("../../../../assets/images/avatar-placeholder.png") top left no-repeat;
+      background-size: 14px;
+      &.girl {
+        background: url("../../../../assets/images/avatar-small.png") top left no-repeat;
+        background-size: 15px;
+      }
+    }
+    &--control {
+      margin: 10px 0 15px;
+      position: relative;
+      input {
+        width: 320px;
+        height: 40px;
+        background: none;
+        line-height: 40px;
+        padding: 0 35px;
+        color: $font-color-main;
+        border: 1px solid $font-color-main;
+        border-radius: 20px;
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder {
+          color: $font-color-main;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      img {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        cursor: pointer;
+        width: 36px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+    }
+
+    &--donation {
+      .btn-primary {
+        max-width: 175px;
+        &:first-of-type {
+          float: left;
+        }
+        &:last-of-type {
+          float: right;
+        }
+        .donate {
+          width: 22px;
+          position: relative;
+          top: -2px;
+          left: -4px;
+        }
+      }
+    }
+  }
+}
+
+// Mobile
+@include media-breakpoint-down(sm) {
+  .widget {
+    &__chat {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0 15px;
+      &--container {
+        padding: 0;
+      }
+      &--body {
+        width: 100%;
+        height: 200px;
+      }
+      &--body {
+        margin: 0;
+        padding: 25px 0;
+        .message {
+          &.red {
+            margin-right: 0;
+          }
+          &.grey {
+            max-width: 290px;
+          }
+        }
+      }
+      &--control {
+        input {
+          width: 85%;
+        }
+      }
+      &--donation {
+        .btn-primary {
+          max-width: 48%;
+        }
+      }
+    }
+  }
+}

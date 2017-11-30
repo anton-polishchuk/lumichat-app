@@ -1,0 +1,61 @@
+@import "../../scss/variables.scss";
+@import '../../../../node_modules/bootstrap/scss/_functions.scss';
+@import "../../../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../../../node_modules/bootstrap/scss/_mixins.scss";
+
+// INNER COMPONENTS
+:host ::ng-deep {
+  h1 {margin: 100px 0 50px!important;}
+  h2, .widget__month {padding-top: 0!important;}
+  h2 {line-height: 45px!important; margin: 0!important}
+  .widget__month--stats { padding: 19px 0 10px 0!important;}
+  .story {margin: 36px 0 22px 0}
+  .avatar {width: 370px; height: 588px}
+  section {
+    .container:last-of-type {
+      & > .row:last-of-type {
+        padding-bottom: 50px!important;
+      }
+    }
+  }
+}
+
+// PAGE STYLES
+h1 {
+  margin-bottom: 50px;
+}
+
+// Mobile
+@include media-breakpoint-down(sm) {
+  .widget__month--info {
+    top: 70px!important;
+    height: 280px!important;
+    margin-top: 100px;
+  }
+  // INNER COMPONENTS
+  :host ::ng-deep {
+    h1 {margin: 20px 0 0!important;}
+    h2.name {
+      top: 95px!important;
+    }
+    .widget__month--avatar{
+      margin-top: 30px!important;
+    }
+    .profile__page .widget__month--info {
+      top: 70px!important;
+      height: 280px!important;
+      margin-top: 50px;
+      margin-left: 5px;
+    }
+    .btn-primary {
+      position: relative;
+      top: 20px!important;
+    }
+    .widget__month--actions {
+      margin-bottom: 0!important;
+    }
+    .btn__live--lg {
+      top: -30px!important;
+    }
+  }
+}

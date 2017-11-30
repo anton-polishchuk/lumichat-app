@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#000000" />
+  <meta name="dl8-customization-brand-name" content="LumiChat">
+  <meta name="dl8-customization-brand-logo" content="assets/images/lumichat.svg">
+  <title>LumiChat</title>
+  <base href="/">
+  <link rel="icon" href="/assets/images/favico.png">
+  <script src="//cdn.delight-vr.com/latest/dl8-83ac19c6499cf3d5dd5898a1aba79569becc1a33.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+  <div class="popup" id="subscribe">
+    <div class="popup__content">
+      <img class="popup__content--close" src="/assets/images/cross.svg" alt="close" id="popupClose">
+      <h2>
+        Sign up for free and get <br class="d-xs-none"/>
+        access to unlimited VR communication
+      </h2>
+      <form action="https://lumichat.us17.list-manage.com/subscribe/post?u=62695515f3819fedfd202b8d0&amp;id=ddbb15edd8"
+            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+            target="_blank" novalidate>
+
+      <div class="email-field mc-field-group">
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="example@gmail.com">
+      </div>
+      <div class="name-field mc-field-group">
+        <input type="text" value="" name="FNAME" class="name" id="mce-FNAME" placeholder="Your Name">
+      </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+          <input type="submit" value="Get Access" name="subscribe" id="mc-embedded-subscribe" class="btn__primary main">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));
+  var $mcj = jQuery.noConflict(true);
+  (function(){
+    var closeBtn = document.getElementById("popupClose");
+    var submitBtn = document.getElementById("mc-embedded-subscribe");
+    var email = document.getElementById("mce-EMAIL");
+    var errorResp = document.getElementById("mce-error-response");
+    var successResp = document.getElementById("mce-success-response");
+    var popup = document.getElementById("subscribe");
+
+    submitBtn.addEventListener("click", function (event) {
+      var errors = document.getElementsByClassName("mce_inline_error");
+      if(!errors.length) {
+        event.target.classList.add("loader");
+      };
+      setTimeout(function () {
+        if(successResp.display!=="none"){
+          popup.style.visibility = "hidden";
+        }
+      }, 5000)
+    });
+
+    function clearResponse() {
+      errorResp.innerHTML = "";
+      successResp.innerHTML = "";
+      errorResp.style.display="none";
+      successResp.style.display="none";
+    }
+
+    email.addEventListener("click", function () {
+      clearResponse();
+    });
+
+    closeBtn.addEventListener("click", function () {
+      var form = document.getElementById("mc-embedded-subscribe-form");
+      var errors = document.getElementsByClassName("mce_inline_error");
+
+      [].forEach.call(errors, function (error) {
+        if(error.tagName == "INPUT") {
+          error.classList.remove("mce_inline_error");
+        }
+      });
+      [].forEach.call(errors, function (error) {
+        if(error.tagName == "DIV") {
+          error.style.display="none"
+        }
+      });
+      form.reset();
+      clearResponse();
+      popup.style.visibility = "hidden";
+    })
+
+  })()
+  </script>
+</body>
+</html>

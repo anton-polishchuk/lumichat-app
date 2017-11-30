@@ -1,0 +1,163 @@
+@import "../../../scss/variables";
+@import '../../../../../node_modules/bootstrap/scss/_functions.scss';
+@import "../../../../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../../../../node_modules/bootstrap/scss/_mixins.scss";
+
+.widget__month {
+  padding-top: 120px;
+  h2 {
+    margin-bottom: 0;
+    padding: 30px 0;
+    font: 36px "MuliRegular";;
+    line-height: 65px;
+  }
+  &--avatar {
+    img {
+      padding-top: 10px;
+      width: 100%;
+      max-width: 370px;
+    }
+  }
+
+  &--stats {
+    padding: 13px 0 15px 0;
+    .caption{
+      color: $font-color-alter;
+      font: 22px "MuliRegular";
+    }
+    .stat {
+      padding-top: 5px;
+      font-size: 26px;
+    }
+    .col-md-9 {
+      padding-left: 40px;
+    }
+  }
+  .story {
+    font: 22px "MuliRegular";
+    line-height: 28px;
+  }
+  &--actions {
+    margin-top: 30px;
+  }
+}
+
+// MOBILE
+@media only screen and (max-width : 321px){
+  .widget__month {
+    &--stats {
+      .stat {
+        font-size: 16px!important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .widget__month {
+    padding-top: 50px;
+    h2 {
+      font-size: 22px!important;
+      line-height: 25px!important;
+      position: relative;
+      top: 55px;
+      left: 20px;
+    }
+    &--avatar {
+      margin-top: 20px;
+        float: left;
+    }
+    .btn__live--lg {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 120px;
+    }
+    &--info {
+      position: relative;
+      top: 30px;
+      height: 250px;
+    }
+    &--actions {
+      max-width: 100%;
+      margin: 20px auto 0;
+    }
+
+    &--stats {
+      position: static;
+      margin-top: 60px;
+      .col-md-9 {
+        padding-left: 15px;
+      }
+      .caption {
+        font-size: 18px;
+      }
+      .stat {
+        font-size: 17px;
+      }
+    }
+    &--age {
+      + div {
+        position: static;
+      }
+    }
+
+   &--followers, &--language, &--age, &--country, &--interests {
+    position: absolute;
+     width: 48%;
+     padding: 0!important;
+  }
+    &--followers {
+      top: 0;
+      left: 0;
+    }
+    &--language {
+      top: 0;
+      left: 44%;
+    }
+    &--age {
+      top: 80px;
+      left: 0;
+    }
+    &--country {
+      top: 80px;
+      left: 44%;
+    }
+    &--interests {
+      width: 100%;
+      top: 160px;
+      left: 0;
+    }
+    &--actions {
+      margin-top: 20px;
+      & > div {
+        padding: 0!important;
+        &:first-of-type {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-only(sm) {
+  .widget__month {
+    &--info {
+      top: 30px;
+      height: 160px;
+    }
+    &--language {
+      left: 33%;
+    }
+    &--age {
+      left: 0;
+    }
+    &--country {
+      left: 33%;
+    }
+    &--interests {
+      top: 0;
+      left: 66%;
+    }
+  }
+}

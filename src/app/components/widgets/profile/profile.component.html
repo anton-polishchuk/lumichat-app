@@ -1,0 +1,64 @@
+<section class="widget__month">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 widget__month--avatar d-xs-none">
+        <img src="/assets/images/nadya_nabakova.png" alt="Nadya Nabakova">
+      </div>
+      <div class="col-md-7 offset-md-1">
+        <h1 *ngIf="title">Performer <br class="d-xs-block"/> of the month</h1>
+        <img src="/assets/images/nabakova_mobile.png" alt="" class="widget__month--avatar d-xs-block">
+        <h2 class="name">
+          Nadya Nabakova <span class="btn__live btn__live--lg">Live</span>
+        </h2>
+        <div class="widget__month--info">
+          <div class="row widget__month--stats">
+            <div class="col-md-3 widget__month--followers">
+              <div class="caption">Followers</div>
+              <div class="stat">1.1k</div>
+            </div>
+            <div class="col-md-9 widget__month--interests">
+              <div class="caption">Interests</div>
+              <div class="stat">Comics, Anime, Japan</div>
+            </div>
+          </div>
+          <div class="row widget__month--stats">
+            <div class="col-md-3 widget__month--age">
+              <div class="caption">Age</div>
+              <div class="stat">21</div>
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-5 widget__month--country">
+                  <div class="caption">Country</div>
+                  <div class="stat">Russia</div>
+                </div>
+                <div class="col-md-7 px-1 widget__month--language">
+                  <div class="caption">Language</div>
+                  <div class="stat">Russian, English</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row last d-xs-none">
+          <div class="col-md-12">
+            <div class="story" *ngIf="story">Effortlessy browse VR streams and communicate with <br>
+              performers without ever taking off your headset</div>
+          </div>
+        </div>
+        <div class="row widget__month--actions">
+          <div class="col-md-5">
+            <a routerLink="/live" routerLinkActive="active">
+            <div class="btn-primary alter">Check video in VR</div>
+            </a>
+          </div>
+          <div class="col-md-7" *ngIf="checkProfileBtn">
+            <a routerLink="/profile" routerLinkActive="active">
+            <div class="btn-primary alter">Check profile</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

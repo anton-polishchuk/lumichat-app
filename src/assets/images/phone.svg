@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="375 768.103 38 70">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #95989a;
+      }
+
+      .cls-1 {
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Phone" transform="translate(0 16.103)">
+    <g id="Rectangle_8" data-name="Rectangle 8" class="cls-1" transform="translate(375 752)">
+      <rect class="cls-4" width="38" height="70" rx="6"/>
+      <rect class="cls-5" x="1" y="1" width="36" height="68" rx="5"/>
+    </g>
+    <g id="Ellipse_4" data-name="Ellipse 4" class="cls-2" transform="translate(390 808)">
+      <circle class="cls-4" cx="4" cy="4" r="4"/>
+      <circle class="cls-5" cx="4" cy="4" r="3.25"/>
+    </g>
+    <g id="Rectangle_9" data-name="Rectangle 9" class="cls-3" transform="translate(389 760)">
+      <rect class="cls-4" width="10" height="2" rx="1"/>
+      <rect class="cls-5" x="0.5" y="0.5" width="9" height="1" rx="0.5"/>
+    </g>
+  </g>
+</svg>

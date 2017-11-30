@@ -1,0 +1,82 @@
+@import "variables";
+
+.btn {
+  &-primary, &__primary {
+    cursor: pointer;
+    text-align: center;
+    font-size: $font-size-main;
+    line-height: $btn-line-height-main;
+    width: $btn-width;
+    height: $btn-height;
+    color: $btn-color;
+    border: $btn-border;
+    border-radius: $btn-border-radius;
+    &.main {
+      font-family: "MuliRegular";
+      background: $btn-bg-main;
+      &:hover {
+        background: $btn-hover-main;
+        box-shadow: 0 0 20px #F72B2B;
+      }
+      &:active {
+        background: $btn-pressed-main;
+        box-shadow: none;
+        color: $font-color-alter;
+      }
+    }
+    &.alter {
+      font-family: "SegoeUIRegular";
+      background: $btn-bg-alter;
+      &:hover {
+        background: $btn-hover-alter;
+      }
+      &:active {
+        background: $btn-pressed-alter;
+      }
+    }
+  }
+  &__live {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    background: $btn-bg-live;
+    font-family: "MuliSemibold";
+
+    &--lg {
+      width: $btn-live-lg-width;
+      height: $btn-live-lg-height;
+      border-radius: $btn-live-lg-border-radius;
+      font-size: $btn-live-lg-font-size !important;
+      line-height: $btn-live-lg-line-height !important;
+      margin: 0 8px 0 10px;
+      position: relative;
+      top: -2px;
+    }
+    &--sm {
+      width: $btn-live-sm-width;
+      height: $btn-live-sm-height;
+      border-radius: $btn-live-sm-border-radius;
+      font-size: $btn-live-sm-font-size !important;
+      line-height: $btn-live-sm-line-height !important;
+      padding: 0 7px;
+    }
+  }
+}
+
+// MOBILE
+@include media-breakpoint-down(sm) {
+  .btn {
+    &-primary, &__primary {
+      width: 100%;
+    }
+    &__live {
+      &--lg {
+        width: 46px;
+        height: 26px;
+        line-height: 26px!important;
+        font-size: 16px!important;
+        margin: 0 5px;
+      }
+    }
+  }
+}

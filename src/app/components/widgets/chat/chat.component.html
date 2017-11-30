@@ -1,0 +1,33 @@
+<div class="container widget__chat">
+  <div class="row">
+    <div class="col-md-12 widget__chat--container">
+      <div class="widget__chat--heading d-xs-none">Nicole Stevens</div>
+      <div class="hide-scroll">
+        <div class="widget__chat--body" id="chat">
+          <div class="message" *ngFor="let message of messages"
+               [ngClass]="{'red': message.owner === 1, 'grey': message.owner === 0, 'gold': message.owner === 3,
+               'dark': (message.owner !== 1 && message.owner !== 0)}">
+            <div class="widget__chat--text">{{message.text}}</div>
+            <div class="widget__chat--signature" *ngIf="message.owner !== 1 && message.owner !== 3"
+                 [ngClass]="{'girl': message.owner === 0}">
+              <span *ngIf="message.owner === 0">Nadya Nabakova</span>
+              <span *ngIf="message.owner !== 0 && message.owner !== 1" [innerHTML]="message.owner"></span>
+            </div>
+          </div>
+        </div>
+      <div class="widget__chat--control">
+        <input type="text" placeholder="Say something" [(ngModel)]="text" (keyup.enter)="sendMessage(text)">
+        <img src="../../../../assets/images/send-btn.svg" alt="Send" width="30px" (click)="sendMessage(text)">
+      </div>
+        <div class="widget__chat--donation">
+          <div class="btn-primary alter" (click)="openPopup()">
+            <img src="../../../../assets/images/donate.svg" alt="donate" class="donate"> Make a tip
+          </div>
+          <div class="btn-primary alter" (click)="openPopup()">
+            Private Session
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

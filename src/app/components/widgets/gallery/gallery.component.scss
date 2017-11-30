@@ -1,0 +1,21 @@
+@import '../../../../../node_modules/bootstrap/scss/_functions.scss';
+@import "../../../../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../../../../node_modules/bootstrap/scss/_mixins.scss";
+
+.widget__gallery {
+  margin: 50px 0 40px;
+  img {
+    margin-bottom: 30px;
+  }
+}
+
+
+//Mobile
+@include media-breakpoint-down(sm) {
+  .widget__gallery {
+    img {
+      width: 100%;
+    }
+  }
+
+}

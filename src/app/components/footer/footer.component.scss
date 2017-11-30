@@ -1,0 +1,44 @@
+@import "../../scss/variables";
+@import "../../../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../../../node_modules/bootstrap/scss/_mixins.scss";
+
+footer {
+  background: #2C2E36;
+  padding: 30px 0 20px 0;
+  margin-top: 120px;
+
+  h5, p, a {
+    font: 22px "MuliRegular";
+    line-height: 28px;
+  }
+
+  a {
+    color: $font-color-main;
+    padding-right: 10px;
+  }
+
+  h5 {
+    color: #6c6d72
+  }
+  p {
+    margin-bottom: 29px;
+  }
+  span {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 20px;
+  }
+
+  .row:last-of-type {
+    border-top: 1px solid #42454c;
+  }
+}
+
+// MOBILE
+@include media-breakpoint-down(sm) {
+  footer {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,99 @@
+@import "../../scss/variables.scss";
+@import '../../../../node_modules/bootstrap/scss/_functions.scss';
+@import "../../../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../../../node_modules/bootstrap/scss/_mixins.scss";
+
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  min-height: 50px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  background: $background-main;
+  z-index: $zindex-fixed;
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  &__menu {
+    padding-top: 10px;
+  }
+  &__logo {
+    display: block;
+    float: left;
+    margin-right: 55px;
+    img {
+      width: 150px;
+    }
+  }
+  &__links {
+    padding-top: 5px;
+    float: left;
+    a {
+      font-size: 18px;
+      padding-right: 20px;
+    }
+  }
+  &__early {
+    float: right;
+  }
+  &__sandwich {
+    display: none;
+  }
+}
+
+// MOBILE
+@include media-breakpoint-down(sm) {
+  .navbar {
+    height: 60px;
+    padding: 5px 21px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    &__menu {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__logo {
+      margin-bottom: 25px;
+    }
+    &__links {
+      width: 100%;
+      position: fixed;
+      top: 59px;
+      left: 0;
+      display: none;
+      padding: 5px 21px 15px;
+      border-top: $mobile-menu-border;
+      border-bottom: $mobile-menu-border;
+      background: $background-main;
+      z-index: $zindex-tooltip;
+      a {
+        color: $font-color-main;
+        display: block;
+        font-size: 25px;
+        line-height: 50px;
+      }
+      &.opened {
+        display: block;
+      }
+      .btn-primary {
+        margin-top: 15px;
+      }
+    }
+    &__sandwich {
+      display: block;
+      position: absolute;
+      top: 17px;
+      right: 0;
+      width: 28px;
+      height: 22px;
+      background: url("/assets/images/sandwich_btn.svg") top right no-repeat;
+      background-size: 28px;
+      &.opened {
+        background: url("/assets/images/menu_cross.svg") top right no-repeat;
+      }
+    }
+  }
+}

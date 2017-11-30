@@ -1,0 +1,20 @@
+<div class="container navbar">
+  <div class="row navbar__container">
+    <div class="col-md-7 navbar__menu">
+      <div class="navbar__logo">
+        <a routerLink="/" routerLinkActive="active"><img src="assets/images/lumichat.svg" alt="Lumichat"></a>
+        <div class="navbar__sandwich" (click)="toggleMobileMenu()" [ngClass]="{'opened': mobileMenuOpened}">
+        </div>
+      </div>
+      <div class="navbar__links" [ngClass]="{'opened': mobileMenuOpened}" (click)="toggleMobileMenu()">
+        <a routerLink="/live" routerLinkActive="active">Live now</a>
+        <a routerLink="/catalogue" routerLinkActive="active">Catalogue</a>
+        <a href="http://about.lumichat.com/" target="_blank">For performers</a>
+        <div class="btn-primary main d-xs-block" (click)="[activatePopup()]">Get early access</div>
+      </div>
+    </div>
+    <div class="col-md-5 d-xs-none">
+      <div class="btn-primary main navbar__early" (click)="[activatePopup()]">Get early access</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+@mixin h2 {
+  font-family: "MuliBlack";
+  font-size: 52px;
+  line-height: 72px;
+  padding-bottom: 60px;
+  background-size: 75px 45px;
+}
+
+// MOBILE
+@mixin p-mobile {
+  color: $font-color-main;
+  font-size: 17px;
+  line-height: 21px;
+  margin-bottom: 20px;
+}
